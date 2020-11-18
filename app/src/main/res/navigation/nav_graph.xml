@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destination1">
+    <fragment
+        android:id="@+id/destination1"
+        android:name="com.example.navigationcomponent.Destination1"
+        android:label="fragment_destination1"
+        tools:layout="@layout/fragment_destination1" >
+        <action
+            android:id="@+id/action_destination1_to_homeSubFragment1"
+            app:destination="@id/homeSubFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/destination2"
+        android:name="com.example.navigationcomponent.Destination2"
+        android:label="fragment_destination2"
+        tools:layout="@layout/fragment_destination2" />
+    <fragment
+        android:id="@+id/destination3"
+        android:name="com.example.navigationcomponent.Destination3"
+        android:label="fragment_destination3"
+        tools:layout="@layout/fragment_destination3" />
+    <fragment
+        android:id="@+id/homeSubFragment1"
+        android:name="com.example.navigationcomponent.HomeSubFragment1"
+        android:label="fragment_home_sub1"
+        tools:layout="@layout/fragment_home_sub1" >
+        <action
+            android:id="@+id/action_homeSubFragment1_to_homeSubFragment2"
+            app:destination="@id/homeSubFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeSubFragment2"
+        android:name="com.example.navigationcomponent.HomeSubFragment2"
+        android:label="fragment_home_sub2"
+        tools:layout="@layout/fragment_home_sub2" />
+</navigation>
